@@ -9,15 +9,23 @@
 # Import functions from functions file
 
 import functions
+import functions2
 
 # Step 1: Generate the data (300 random integers between 1 and 100,000)
-data = functions.generate_data(300, 1, 100000)
+data = functions2.load_data_from_csv("data/data_points.csv")
 
 # Step 2: Initialize the centroids randomly
-centroids = functions.initialize_centroids(data, 5)
+centroids = functions2.load_initial_centroids_from_csv("data/initial_centroids.csv")
 
 functions.save_data_to_csv(data, "results/data_points.csv")
 functions.save_initial_centroids_to_csv(centroids, "results/initial_centroids.csv")
+
+# for testing
+# print ("Data points loaded from CSV:", data[:10])  # Print first 10 data points
+# print ("Initial centroids loaded from CSV:", centroids)  # Print initial centroids
+
+
+
 
 # Step 3: Assign each point to the nearest centroid for the first time
 current_assignments = functions.assign_clusters(data, centroids)
@@ -65,7 +73,6 @@ else:
 
 print()
 print("Final Centroids:", centroids)
-
 
 
 

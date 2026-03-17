@@ -1,10 +1,11 @@
 # functions for k-means clustering
 
-# function no. 1: generate random data
+
 import random
 from matplotlib import colors
 import matplotlib.pyplot as plt
 
+# function no. 1: generate random data
 def generate_data(num_points, lower_bound, upper_bound):
     data = []
     for _ in range(num_points):
