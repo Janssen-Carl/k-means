@@ -1,11 +1,3 @@
-# Activity 
-# 
-# Create a code in Python that creates a random list of 300 integers
-# between 1 and 100,000 and create five (5) clusters using k-means
-# clustering using 5 random centroids. Stop the clustering process
-# when no changes in the clustering happened for 2 consecutive
-# iterations, or after 40 iterations whichever comes first.
-
 # Import functions from functions file
 
 import functions
