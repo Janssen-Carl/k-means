@@ -199,36 +199,3 @@ def plot_points_per_cluster(final_assignments, num_centroids, folder="results"):
     plt.close()
     print("Graph saved to", filename)
 
-
-# function: bar graph 2 - final centroid values per cluster
-def plot_final_centroids(final_centroids, folder="results"):
-
-    # create the labels for each cluster
-    cluster_labels = []
-    for i in range(len(final_centroids)):
-        cluster_labels.append("Cluster " + str(i + 1))
-
-    # round the centroid values for display
-    rounded_centroids = []
-    for value in final_centroids:
-        rounded_centroids.append(round(value, 2))
-
-    # create the bar graph
-    plt.figure(figsize=(8, 5))
-    colors = ["steelblue", "coral", "mediumseagreen", "mediumpurple", "sandybrown"]
-    plt.bar(cluster_labels, rounded_centroids, color=colors)
-
-    # add labels and title
-    plt.title("Final Centroid Value per Cluster")
-    plt.xlabel("Cluster")
-    plt.ylabel("Centroid Value")
-
-    # add the centroid value on top of each bar
-    for i in range(len(rounded_centroids)):
-        plt.text(i, rounded_centroids[i] + 100, str(rounded_centroids[i]), ha="center")
-
-    # save the graph to the results folder
-    filename = folder + "/final_centroids.png"
-    plt.savefig(filename)
-    plt.close()
-    print("Graph saved to", filename)
