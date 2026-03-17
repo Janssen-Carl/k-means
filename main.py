@@ -70,4 +70,3 @@ functions.save_initial_centroids_to_csv(centroids, "results/initial_centroids.cs
 functions.save_centroids_per_iteration_to_csv(centroids_history, "results/centroids_per_iteration.csv")
 functions.save_final_results_to_csv(data, current_assignments, centroids, "results/final_results.csv")
 functions.plot_points_per_cluster(current_assignments, 5)
-functions.plot_final_centroids(centroids)
